@@ -10,7 +10,7 @@ pip install dashlog
 ```python
 from dashlog import Dashlog
 
-dash = Dashlog('<Your-API-Key-here>')
+dash = Dashlog('<YOUR-API-KEY>')
 
 response = dash.log(
     project='MyProject',  # string - required
@@ -19,7 +19,7 @@ response = dash.log(
     title='New User',                           # string - required
     description='John Doe created an account',  # string - optionnal
 
-    data={                              # dict - optionnal
+    data={                              # dict[str, str | int | float | boolean] - optionnal
         'email': 'john.doe@dashlog.app'  # Values can be
         'username': '@johndoe',          # strings,
         'age': 29,                       # numbers,
@@ -31,4 +31,5 @@ response = dash.log(
 
 print(response.status)  # 200
 print(response.json())  # {'status': 200, 'message': 'log added successfully'}
+
 ```

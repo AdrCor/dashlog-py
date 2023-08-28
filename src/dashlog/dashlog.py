@@ -3,7 +3,7 @@ import requests
 
 class Dashlog:
     def __init__(self, token_user: str):
-        self.base_url = "https://api.dashlog.app"
+        self.base_url = "https://api.dashlog.app/v1"
         self.header = {
             "Content-Type": "application/json",
             "Authorization": "Bearer " + token_user,
